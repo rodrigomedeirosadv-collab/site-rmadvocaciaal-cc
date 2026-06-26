@@ -208,6 +208,17 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   min-height: 540px;
 }
 
+.hero__photo-wrap::before {
+  content: '';
+  position: absolute;
+  top: -20px; left: -20px;
+  width: 100%; height: 100%;
+  border: 1px solid rgba(201,168,76,0.35);
+  border-radius: var(--radius) 0 0 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
 .hero__photo {
   width: 100%;
   height: 100%;
@@ -215,6 +226,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   object-position: top center;
   border-radius: var(--radius) 0 0 0;
   display: block;
+  position: relative; z-index: 1;
 }
 
 /* =====================================================
