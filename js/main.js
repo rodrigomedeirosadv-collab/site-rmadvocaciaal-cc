@@ -55,6 +55,22 @@ if (cookieBanner && cookieAccept) {
   });
 }
 
+/* Timeline auto-play — acende itens de cima para baixo ao entrar na viewport */
+const timeline = document.querySelector('.timeline');
+if (timeline) {
+  const tlObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      const items = timeline.querySelectorAll('.timeline__item');
+      items.forEach((item, i) => {
+        setTimeout(() => item.classList.add('active'), i * 550);
+      });
+      tlObserver.unobserve(timeline);
+    });
+  }, { threshold: 0.15, rootMargin: '0px 0px -60px 0px' });
+  tlObserver.observe(timeline);
+}
+
 /* Instagram embeds loader */
 if (document.querySelector('blockquote.instagram-media')) {
   const script = document.createElement('script');

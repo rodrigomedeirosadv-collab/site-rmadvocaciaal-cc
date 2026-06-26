@@ -421,7 +421,14 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   content: '';
   position: absolute;
   left: 15px; top: 32px; bottom: 0;
-  width: 1px; background: var(--borda);
+  width: 1px; background: var(--dourado);
+  transform: scaleY(0);
+  transform-origin: top center;
+  transition: transform 0.45s cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
+}
+
+.timeline__item.active:not(:last-child)::before {
+  transform: scaleY(1);
 }
 
 .timeline__dot {
@@ -431,23 +438,29 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   border: 2px solid var(--borda);
   display: flex; align-items: center; justify-content: center;
   position: relative; z-index: 1;
-  transition: border-color 0.3s ease, background 0.3s ease, transform 0.3s ease;
-}
-
-/* hover — preenche a bolinha */
-.timeline__item:hover .timeline__dot {
-  border-color: var(--dourado);
-  background: var(--azul);
-  transform: scale(1.15);
+  transition: border-color 0.35s ease, background 0.35s ease, transform 0.3s ease;
 }
 
 .timeline__dot-inner {
   width: 10px; height: 10px; border-radius: 50%;
   background: var(--borda);
-  transition: background 0.3s ease;
+  transition: background 0.35s ease;
 }
 
-.timeline__item:hover .timeline__dot-inner { background: var(--dourado); }
+/* Lit — hover ou active */
+.timeline__item:hover .timeline__dot,
+.timeline__item.active .timeline__dot {
+  border-color: var(--dourado);
+  background: var(--azul);
+}
+
+.timeline__item:hover .timeline__dot-inner,
+.timeline__item.active .timeline__dot-inner {
+  background: var(--dourado);
+}
+
+/* Scale só no hover */
+.timeline__item:hover .timeline__dot { transform: scale(1.15); }
 
 .timeline__content { padding-top: 4px; }
 
