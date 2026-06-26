@@ -140,3 +140,24 @@ if (form) {
     }
   });
 }
+
+/* Video players */
+document.querySelectorAll('.reel-video').forEach(card => {
+  const video = card.querySelector('.reel-video__el');
+  const overlay = card.querySelector('.reel-video__overlay');
+
+  overlay.addEventListener('click', () => {
+    video.setAttribute('controls', '');
+    video.play();
+    overlay.classList.add('hidden');
+  });
+
+  video.addEventListener('pause', () => {
+    overlay.classList.remove('hidden');
+  });
+
+  video.addEventListener('ended', () => {
+    video.removeAttribute('controls');
+    overlay.classList.remove('hidden');
+  });
+});

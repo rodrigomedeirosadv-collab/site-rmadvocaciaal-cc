@@ -579,6 +579,36 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   border: 1px solid rgba(255,255,255,0.15);
 }
 
+.reel-video {
+  aspect-ratio: 9 / 16;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(160deg, #0d2040 0%, var(--azul-escuro) 100%);
+  border: 1px solid rgba(201,168,76,0.18);
+  transition: border-color 0.3s ease, transform 0.35s ease;
+}
+.reel-video:hover { border-color: rgba(201,168,76,0.5); transform: translateY(-6px); }
+.reel-video__el { width: 100%; height: 100%; object-fit: cover; display: block; }
+.reel-video__overlay {
+  position: absolute; inset: 0;
+  display: flex; align-items: center; justify-content: center;
+  background: rgba(6,14,34,0.25);
+  transition: opacity 0.3s ease;
+}
+.reel-video__overlay.hidden { opacity: 0; pointer-events: none; }
+.reel-video__btn {
+  width: 64px; height: 64px;
+  background: var(--dourado);
+  border-radius: 50%; border: none; cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 0 0 rgba(201,168,76,0);
+}
+.reel-video__btn:hover {
+  transform: scale(1.12);
+  box-shadow: 0 0 0 12px rgba(201,168,76,0.15);
+}
+
 .videos__instagram-link {
   display: inline-flex; align-items: center; gap: 10px;
   margin-top: 40px;
