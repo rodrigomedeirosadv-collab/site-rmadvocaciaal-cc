@@ -194,7 +194,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 
 .btn-primary {
   display: inline-flex; align-items: center; gap: 8px;
-  background: var(--dourado); color: var(--azul-escuro);
+  background: var(--dourado); color: #fff;
   font-family: var(--f-sans); font-size: var(--s2); font-weight: 700;
   letter-spacing: 0.08em; text-transform: uppercase;
   padding: 14px 32px; border-radius: var(--radius);
@@ -575,7 +575,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 
 .btn-dark {
   display: inline-flex; align-items: center; gap: 10px;
-  background: var(--dourado); color: var(--azul-escuro);
+  background: var(--dourado); color: #fff;
   font-family: var(--f-sans); font-size: var(--s2); font-weight: 700;
   letter-spacing: 0.1em; text-transform: uppercase;
   padding: 18px 48px;
@@ -655,7 +655,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   transition: transform var(--trans), box-shadow var(--trans), background var(--trans);
 }
 .whatsapp-float:hover { background: var(--dourado-cl); transform: scale(1.1); box-shadow: 0 8px 32px rgba(201,168,76,0.5); }
-.whatsapp-float svg { width: 28px; height: 28px; fill: var(--azul-escuro); }
+.whatsapp-float svg { width: 28px; height: 28px; fill: #fff; }
 
 /* =====================================================
    COOKIE BANNER
@@ -679,7 +679,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .cookie-banner a { color: var(--dourado); text-decoration: underline; }
 
 .cookie-btn {
-  background: var(--dourado); color: var(--azul-escuro);
+  background: var(--dourado); color: #fff;
   font-family: var(--f-sans); font-size: var(--s2); font-weight: 700;
   padding: 10px 24px; border-radius: var(--radius);
   letter-spacing: 0.06em; text-transform: uppercase;
@@ -845,7 +845,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .form-group textarea { min-height: 140px; resize: vertical; }
 
 .form-submit {
-  background: var(--dourado); color: var(--azul-escuro);
+  background: var(--dourado); color: #fff;
   font-family: var(--f-sans); font-size: var(--s2); font-weight: 700;
   letter-spacing: 0.08em; text-transform: uppercase;
   padding: 16px 32px; border-radius: var(--radius);
