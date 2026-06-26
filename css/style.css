@@ -112,14 +112,10 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   position: relative;
 }
 
-/* Grade dourada sutil */
+/* Brilho lateral */
 .hero::before {
   content: '';
   position: absolute; inset: 0;
-  background-image:
-    linear-gradient(rgba(201,168,76,0.11) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(201,168,76,0.11) 1px, transparent 1px);
-  background-size: 72px 72px;
   pointer-events: none;
 }
 
@@ -195,7 +191,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 
 .hero__photo-wrap {
   position: relative;
-  width: 100%; max-width: 460px;
+  width: 100%; max-width: 580px;
 }
 
 .hero__photo-wrap::before {
@@ -210,7 +206,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 
 .hero__photo {
   width: 100%;
-  aspect-ratio: 3/4;
+  aspect-ratio: 2/3;
   object-fit: cover;
   object-position: top;
   border-radius: var(--radius);
@@ -652,10 +648,6 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .page-hero::before {
   content: '';
   position: absolute; inset: 0;
-  background-image:
-    linear-gradient(rgba(201,168,76,0.11) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(201,168,76,0.11) 1px, transparent 1px);
-  background-size: 72px 72px;
   pointer-events: none;
 }
 
