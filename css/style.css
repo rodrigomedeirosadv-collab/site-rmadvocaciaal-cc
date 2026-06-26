@@ -673,7 +673,7 @@ a.footer__info-value:hover { color: var(--dourado); }
   margin-bottom: 16px;
 }
 
-.footer__logo img { height: 48px; width: auto; filter: brightness(0) invert(1); }
+.footer__logo img { height: 40px; width: auto; filter: brightness(0) invert(1); }
 
 .footer__tagline {
   font-family: var(--f-serif); font-style: italic; font-weight: 300;
