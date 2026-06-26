@@ -131,7 +131,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 
 .hero__inner {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1.2fr;
   gap: 64px;
   align-items: center;
   padding: 80px 0;
@@ -191,7 +191,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 
 .hero__photo-wrap {
   position: relative;
-  width: 100%; max-width: 580px;
+  width: 100%; max-width: 100%;
 }
 
 .hero__photo-wrap::before {
