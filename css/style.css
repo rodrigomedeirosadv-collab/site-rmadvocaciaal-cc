@@ -124,7 +124,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
    ===================================================== */
 .hero {
   background:
-    linear-gradient(135deg, #142E5C 0%, #1B3F7A 55%, #132B56 100%);
+    linear-gradient(135deg, var(--azul-escuro) 0%, var(--azul) 55%, #112347 100%);
   min-height: 100vh;
   display: flex; align-items: center;
   padding-top: 72px;
@@ -139,13 +139,13 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   pointer-events: none;
 }
 
-/* Luz central — clareia o centro sem apagar as bordas */
+/* Luz central */
 .hero::after {
   content: '';
   position: absolute; inset: 0;
   background:
-    radial-gradient(ellipse 70% 80% at 35% 45%, rgba(255,255,255,0.07) 0%, transparent 65%),
-    radial-gradient(ellipse 50% 60% at 28% 50%, rgba(184,150,62,0.10) 0%, transparent 70%);
+    radial-gradient(ellipse 80% 90% at 35% 45%, rgba(255,255,255,0.13) 0%, transparent 60%),
+    radial-gradient(ellipse 50% 60% at 28% 50%, rgba(184,150,62,0.12) 0%, transparent 70%);
   pointer-events: none;
 }
 
