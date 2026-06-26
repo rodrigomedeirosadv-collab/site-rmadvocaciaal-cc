@@ -528,16 +528,55 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   gap: 24px;
 }
 
-.videos__embed {
-  border-radius: var(--radius);
+.reel-card {
+  display: block;
+  aspect-ratio: 9 / 16;
+  position: relative;
   overflow: hidden;
-  background: rgba(255,255,255,0.05);
-  border: 1px solid rgba(201,168,76,0.15);
+  background: linear-gradient(160deg, #0d2040 0%, var(--azul-escuro) 100%);
+  border: 1px solid rgba(201,168,76,0.18);
+  transition: border-color 0.3s ease, transform 0.35s ease;
+  cursor: pointer;
 }
 
-.videos__embed blockquote {
-  margin: 0 !important;
-  min-height: 400px;
+.reel-card::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: radial-gradient(ellipse 70% 70% at 50% 40%, rgba(201,168,76,0.07) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.reel-card:hover {
+  border-color: rgba(201,168,76,0.5);
+  transform: translateY(-6px);
+}
+
+.reel-card__play {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 64px; height: 64px;
+  background: var(--dourado);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 0 0 rgba(201,168,76,0);
+}
+
+.reel-card:hover .reel-card__play {
+  transform: translate(-50%, -50%) scale(1.12);
+  box-shadow: 0 0 0 12px rgba(201,168,76,0.15);
+}
+
+.reel-card__badge {
+  position: absolute;
+  top: 16px; right: 16px;
+  width: 36px; height: 36px;
+  background: rgba(0,0,0,0.35);
+  backdrop-filter: blur(6px);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  border: 1px solid rgba(255,255,255,0.15);
 }
 
 .videos__instagram-link {

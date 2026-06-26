@@ -71,13 +71,6 @@ if (timeline) {
   tlObserver.observe(timeline);
 }
 
-/* Instagram embeds loader */
-if (document.querySelector('blockquote.instagram-media')) {
-  const script = document.createElement('script');
-  script.src = 'https://www.instagram.com/embed.js';
-  script.async = true;
-  document.body.appendChild(script);
-}
 
 /* Contact form validation + submission */
 const form = document.getElementById('contact-form');
