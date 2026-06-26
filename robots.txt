@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://rmadvocaciaal.com.br/sitemap.xml
