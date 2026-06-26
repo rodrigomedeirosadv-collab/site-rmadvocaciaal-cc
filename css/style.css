@@ -664,7 +664,7 @@ a.footer__info-value:hover { color: var(--dourado); }
 .footer__social a:hover { color: var(--dourado); }
 .footer__social svg { width: 22px; height: 22px; }
 .footer__address-wrap { display: flex; gap: 10px; align-items: flex-start; }
-.footer__address-icon { color: var(--dourado); flex-shrink: 0; margin-top: 2px; }
+.footer__address-icon { color: var(--dourado); flex-shrink: 0; margin-top: 5px; }
 .footer__address { font-style: normal; font-size: var(--s2); color: var(--texto-azul); line-height: 1.75; }
 
 .footer__logo {
