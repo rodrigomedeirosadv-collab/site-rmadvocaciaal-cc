@@ -409,7 +409,9 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 
 .timeline::before {
   content: '';
-  position: absolute; left: 15px; top: 0; bottom: 0;
+  position: absolute; left: 15px; top: 16px;
+  /* termina no centro da última bolinha */
+  bottom: 16px;
   width: 1px; background: var(--borda);
 }
 
@@ -417,7 +419,10 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   display: flex; gap: 32px;
   padding-bottom: 40px;
   position: relative;
+  cursor: default;
 }
+
+.timeline__item:last-child { padding-bottom: 0; }
 
 .timeline__dot {
   width: 32px; height: 32px; min-width: 32px;
@@ -426,7 +431,14 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   border: 2px solid var(--borda);
   display: flex; align-items: center; justify-content: center;
   position: relative; z-index: 1;
-  transition: border-color var(--trans), background var(--trans);
+  transition: border-color 0.3s ease, background 0.3s ease, transform 0.3s ease;
+}
+
+/* hover — preenche a bolinha */
+.timeline__item:hover .timeline__dot {
+  border-color: var(--dourado);
+  background: var(--azul);
+  transform: scale(1.15);
 }
 
 .timeline__item.danger .timeline__dot {
@@ -437,9 +449,10 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .timeline__dot-inner {
   width: 10px; height: 10px; border-radius: 50%;
   background: var(--borda);
-  transition: background var(--trans);
+  transition: background 0.3s ease, transform 0.3s ease;
 }
 
+.timeline__item:hover .timeline__dot-inner { background: var(--dourado); }
 .timeline__item.danger .timeline__dot-inner { background: var(--dourado); }
 
 .timeline__content { padding-top: 4px; }
