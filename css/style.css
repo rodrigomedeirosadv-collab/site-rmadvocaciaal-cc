@@ -197,8 +197,6 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   position: relative;
   display: flex;
   align-items: flex-end;
-  /* sangra até a borda direita do container */
-  margin-right: -24px;
 }
 
 .hero__photo-wrap {
@@ -211,10 +209,10 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .hero__photo-wrap::before {
   content: '';
   position: absolute;
-  top: -20px; left: -20px;
+  top: -24px; right: -24px;
   width: 100%; height: 100%;
   border: 1px solid rgba(201,168,76,0.35);
-  border-radius: var(--radius) 0 0 0;
+  border-radius: 0 var(--radius) 0 0;
   z-index: 0;
   pointer-events: none;
 }
@@ -224,9 +222,10 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   height: 100%;
   object-fit: cover;
   object-position: top center;
-  border-radius: var(--radius) 0 0 0;
+  border-radius: var(--radius) var(--radius) 0 0;
   display: block;
   position: relative; z-index: 1;
+  clip-path: polygon(0 0, 100% 0, 100% 88%, 85% 100%, 0 100%);
 }
 
 /* =====================================================
