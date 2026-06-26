@@ -184,10 +184,10 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 
 .hero__sub {
-  font-family: var(--f-serif); font-size: clamp(1.1rem, 2vw, 1.5rem);
+  font-family: var(--f-sans); font-size: clamp(1rem, 1.6vw, 1.25rem);
   font-weight: 300; color: var(--texto-azul);
-  font-style: italic; margin-bottom: 40px;
-  line-height: 1.5;
+  margin-bottom: 40px;
+  line-height: 1.6;
 }
 
 .hero__actions { display: flex; gap: 16px; flex-wrap: wrap; }
