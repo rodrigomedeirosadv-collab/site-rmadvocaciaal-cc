@@ -657,7 +657,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   margin-bottom: 16px;
 }
 
-.footer__logo img { height: 36px; filter: brightness(0) invert(1); }
+.footer__logo img { height: 48px; width: auto; filter: brightness(0) invert(1); }
 
 .footer__tagline {
   font-family: var(--f-serif); font-style: italic;
