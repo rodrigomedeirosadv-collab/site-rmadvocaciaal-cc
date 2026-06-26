@@ -124,7 +124,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
    ===================================================== */
 .hero {
   background:
-    linear-gradient(135deg, var(--azul-escuro) 0%, var(--azul) 55%, #112347 100%);
+    linear-gradient(135deg, #0D2147 0%, #152E5C 55%, #0F2548 100%);
   min-height: 100vh;
   display: flex; align-items: center;
   padding-top: 72px;
@@ -691,7 +691,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
    PÁGINAS INTERNAS — hero compacto
    ===================================================== */
 .page-hero {
-  background: linear-gradient(135deg, var(--azul-escuro) 0%, var(--azul) 60%, #112347 100%);
+  background: linear-gradient(135deg, #0D2147 0%, #152E5C 60%, #0F2548 100%);
   padding: 140px 0 80px;
   text-align: center;
   position: relative;
