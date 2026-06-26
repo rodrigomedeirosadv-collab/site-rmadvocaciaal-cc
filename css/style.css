@@ -6,8 +6,8 @@
 
 /* ── Tokens ── */
 :root {
-  --azul:        #1a237e;
-  --azul-escuro: #0D1654;
+  --azul:        #0B1C3D;
+  --azul-escuro: #060E22;
   --dourado:     #C9A84C;
   --dourado-cl:  #E8C96A;
   --fundo:       #F8FAFC;
@@ -15,7 +15,7 @@
   --texto:       #0F172A;
   --texto-suave: #64748B;
   --borda:       #CBD5E1;
-  --texto-azul:  #B8C4E0;
+  --texto-azul:  #C8D4EC;
 
   --f-serif: 'EB Garamond', Georgia, serif;
   --f-sans:  'Lato', system-ui, sans-serif;
@@ -104,7 +104,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
    ===================================================== */
 .hero {
   background:
-    linear-gradient(135deg, var(--azul-escuro) 0%, var(--azul) 60%, #1e2d8a 100%);
+    linear-gradient(135deg, var(--azul-escuro) 0%, var(--azul) 55%, #112347 100%);
   min-height: 100vh;
   display: flex; align-items: center;
   padding-top: 72px;
@@ -117,8 +117,8 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   content: '';
   position: absolute; inset: 0;
   background-image:
-    linear-gradient(rgba(201,168,76,0.07) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(201,168,76,0.07) 1px, transparent 1px);
+    linear-gradient(rgba(201,168,76,0.11) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(201,168,76,0.11) 1px, transparent 1px);
   background-size: 72px 72px;
   pointer-events: none;
 }
@@ -128,7 +128,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   content: '';
   position: absolute; inset: 0;
   background:
-    radial-gradient(ellipse 55% 60% at 28% 50%, rgba(201,168,76,0.09) 0%, transparent 70%),
+    radial-gradient(ellipse 55% 60% at 28% 50%, rgba(201,168,76,0.13) 0%, transparent 70%),
     radial-gradient(ellipse 40% 80% at 75% 50%, rgba(13,22,84,0.5) 0%, transparent 80%);
   pointer-events: none;
 }
@@ -642,7 +642,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
    PÁGINAS INTERNAS — hero compacto
    ===================================================== */
 .page-hero {
-  background: linear-gradient(135deg, var(--azul-escuro) 0%, var(--azul) 60%, #1e2d8a 100%);
+  background: linear-gradient(135deg, var(--azul-escuro) 0%, var(--azul) 60%, #112347 100%);
   padding: 140px 0 80px;
   text-align: center;
   position: relative;
@@ -653,8 +653,8 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   content: '';
   position: absolute; inset: 0;
   background-image:
-    linear-gradient(rgba(201,168,76,0.07) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(201,168,76,0.07) 1px, transparent 1px);
+    linear-gradient(rgba(201,168,76,0.11) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(201,168,76,0.11) 1px, transparent 1px);
   background-size: 72px 72px;
   pointer-events: none;
 }
