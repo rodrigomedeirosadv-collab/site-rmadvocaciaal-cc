@@ -407,14 +407,6 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   position: relative;
 }
 
-.timeline::before {
-  content: '';
-  position: absolute; left: 15px; top: 16px;
-  /* termina no centro da última bolinha */
-  bottom: 16px;
-  width: 1px; background: var(--borda);
-}
-
 .timeline__item {
   display: flex; gap: 32px;
   padding-bottom: 40px;
@@ -423,6 +415,14 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 
 .timeline__item:last-child { padding-bottom: 0; }
+
+/* Linha de cada item até o próximo — exclui o último */
+.timeline__item:not(:last-child)::before {
+  content: '';
+  position: absolute;
+  left: 15px; top: 32px; bottom: 0;
+  width: 1px; background: var(--borda);
+}
 
 .timeline__dot {
   width: 32px; height: 32px; min-width: 32px;
@@ -441,19 +441,13 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   transform: scale(1.15);
 }
 
-.timeline__item.danger .timeline__dot {
-  border-color: var(--dourado);
-  background: var(--azul);
-}
-
 .timeline__dot-inner {
   width: 10px; height: 10px; border-radius: 50%;
   background: var(--borda);
-  transition: background 0.3s ease, transform 0.3s ease;
+  transition: background 0.3s ease;
 }
 
 .timeline__item:hover .timeline__dot-inner { background: var(--dourado); }
-.timeline__item.danger .timeline__dot-inner { background: var(--dourado); }
 
 .timeline__content { padding-top: 4px; }
 
@@ -468,7 +462,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   color: var(--texto); margin-bottom: 4px;
 }
 
-.timeline__item.danger .timeline__title { color: var(--azul); }
+.timeline__item.danger .timeline__title { color: var(--texto); }
 
 .timeline__desc {
   font-size: var(--s2); color: var(--texto-suave); line-height: 1.6;
