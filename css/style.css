@@ -656,7 +656,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .footer__info-item { display: flex; flex-direction: column; gap: 3px; }
 .footer__info-label {
   font-family: var(--f-sans); font-size: 0.65rem;
-  color: var(--dourado); letter-spacing: 0.15em; text-transform: uppercase;
+  color: rgba(255,255,255,0.7); letter-spacing: 0.15em; text-transform: uppercase;
 }
 .footer__info-value { font-size: var(--s2); color: var(--texto-azul); transition: color var(--trans); }
 a.footer__info-value:hover { color: var(--dourado); }
