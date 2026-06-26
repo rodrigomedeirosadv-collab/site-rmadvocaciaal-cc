@@ -8,8 +8,8 @@
 :root {
   --azul:        #0B1C3D;
   --azul-escuro: #060E22;
-  --dourado:     #C9A84C;
-  --dourado-cl:  #E8C96A;
+  --dourado:     #B8963E;
+  --dourado-cl:  #D4AE58;
   --fundo:       #F8FAFC;
   --branco:      #FFFFFF;
   --texto:       #0F172A;
@@ -30,7 +30,7 @@
   --s8: 3rem;
   --s9: 4rem;
 
-  --radius: 4px;
+  --radius: 0px;
   --shadow: 0 2px 16px rgba(10,15,40,0.10);
   --trans: 200ms ease;
 }
@@ -255,18 +255,18 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
    ===================================================== */
 .services {
   background: var(--fundo);
-  padding: 96px 0;
+  padding: 120px 0;
 }
 
 .section-eyebrow {
   font-family: var(--f-sans); font-size: var(--s1);
-  color: var(--dourado); letter-spacing: 0.2em; text-transform: uppercase;
-  margin-bottom: 12px;
+  color: var(--dourado); letter-spacing: 0.25em; text-transform: uppercase;
+  margin-bottom: 16px;
 }
 
 .section-heading {
-  font-family: var(--f-serif); font-size: clamp(1.8rem, 3vw, 2.75rem);
-  font-weight: 500; line-height: 1.2; color: var(--texto);
+  font-family: var(--f-serif); font-size: clamp(2rem, 3.5vw, 3.25rem);
+  font-weight: 400; line-height: 1.15; color: var(--texto);
 }
 
 .services__header { margin-bottom: 64px; }
@@ -279,13 +279,14 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 
 .service-card {
   background: var(--branco);
-  border-radius: var(--radius);
-  padding: 40px 32px;
-  border-left: 3px solid var(--dourado);
-  box-shadow: var(--shadow);
-  transition: transform var(--trans), box-shadow var(--trans);
+  padding: 48px 40px;
+  border-top: 2px solid var(--dourado);
+  border-bottom: 1px solid var(--borda);
+  border-left: 1px solid var(--borda);
+  border-right: 1px solid var(--borda);
+  transition: transform var(--trans), box-shadow var(--trans), border-top-color var(--trans);
 }
-.service-card:hover { transform: translateY(-4px); box-shadow: 0 8px 32px rgba(10,15,40,0.12); }
+.service-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(10,15,40,0.10); }
 
 .service-card__icon {
   width: 48px; height: 48px;
@@ -294,8 +295,8 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 
 .service-card__title {
-  font-family: var(--f-serif); font-size: var(--s5); font-weight: 600;
-  color: var(--azul); margin-bottom: 12px;
+  font-family: var(--f-serif); font-size: clamp(1.25rem, 2vw, 1.6rem); font-weight: 500;
+  color: var(--azul); margin-bottom: 16px;
 }
 
 .service-card__text {
@@ -317,7 +318,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
    ===================================================== */
 .audience {
   background: var(--azul-escuro);
-  padding: 96px 0;
+  padding: 120px 0;
 }
 
 .audience .section-heading { color: #fff; }
@@ -331,13 +332,15 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 
 .audience-card {
-  background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(201,168,76,0.2);
-  border-radius: var(--radius);
-  padding: 40px 32px;
-  transition: background var(--trans), border-color var(--trans);
+  background: rgba(255,255,255,0.03);
+  border-top: 1px solid rgba(184,150,62,0.4);
+  border-right: 1px solid rgba(255,255,255,0.06);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  border-left: 1px solid rgba(255,255,255,0.06);
+  padding: 48px 40px;
+  transition: background var(--trans), border-top-color var(--trans);
 }
-.audience-card:hover { background: rgba(255,255,255,0.07); border-color: rgba(201,168,76,0.5); }
+.audience-card:hover { background: rgba(255,255,255,0.06); border-top-color: rgba(184,150,62,0.8); }
 
 .audience-card__label {
   font-family: var(--f-sans); font-size: var(--s1);
@@ -360,7 +363,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
    ===================================================== */
 .case {
   background: var(--fundo);
-  padding: 96px 0;
+  padding: 120px 0;
 }
 
 .case__inner {
@@ -388,15 +391,15 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 
 .case__quote {
-  background: var(--azul);
-  border-radius: var(--radius);
-  padding: 32px;
-  border-left: 3px solid var(--dourado);
+  background: transparent;
+  padding: 32px 0 0 32px;
+  border-left: 2px solid var(--dourado);
+  margin-top: 8px;
 }
 
 .case__quote p {
-  font-family: var(--f-serif); font-size: var(--s5);
-  font-weight: 500; color: #fff; line-height: 1.5;
+  font-family: var(--f-serif); font-size: clamp(1.1rem, 2vw, 1.4rem);
+  font-weight: 400; font-style: italic; color: var(--texto); line-height: 1.6;
 }
 
 .timeline {
@@ -462,31 +465,28 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
    EMPRESAS ASSISTIDAS
    ===================================================== */
 .clients {
-  background: var(--branco);
-  padding: 80px 0;
-  border-top: 1px solid var(--borda);
-  border-bottom: 1px solid var(--borda);
+  background: var(--azul);
+  padding: 72px 0;
 }
 
 .clients__label {
   font-family: var(--f-sans); font-size: var(--s1);
-  color: var(--texto-suave); letter-spacing: 0.2em; text-transform: uppercase;
-  text-align: center; margin-bottom: 48px;
+  color: rgba(184,150,62,0.7); letter-spacing: 0.25em; text-transform: uppercase;
+  text-align: center; margin-bottom: 40px;
 }
 
 .clients__grid {
   display: flex;
   align-items: center; justify-content: center;
-  gap: 64px; flex-wrap: wrap;
+  gap: 56px; flex-wrap: wrap;
 }
 
 .clients__logo {
-  font-family: var(--f-serif); font-size: var(--s5); font-weight: 600;
-  color: var(--texto-suave); letter-spacing: 0.02em;
-  opacity: 0.6;
-  transition: opacity var(--trans), color var(--trans);
+  font-family: var(--f-serif); font-size: var(--s5); font-weight: 400;
+  color: rgba(255,255,255,0.35); letter-spacing: 0.04em;
+  transition: color var(--trans);
 }
-.clients__logo:hover { opacity: 1; color: var(--azul); }
+.clients__logo:hover { color: rgba(255,255,255,0.8); }
 
 /* =====================================================
    VÍDEOS INSTAGRAM
@@ -533,38 +533,48 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
    CTA FINAL
    ===================================================== */
 .cta-section {
-  background: var(--dourado);
-  padding: 96px 0;
+  background: var(--azul);
+  padding: 120px 0;
   text-align: center;
+  position: relative; overflow: hidden;
 }
+
+.cta-section::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: radial-gradient(ellipse 60% 70% at 50% 50%, rgba(184,150,62,0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.cta-section .container { position: relative; z-index: 1; }
 
 .cta-section__eyebrow {
   font-family: var(--f-sans); font-size: var(--s1);
-  color: var(--azul-escuro); letter-spacing: 0.2em; text-transform: uppercase;
-  opacity: 0.7; margin-bottom: 12px;
+  color: var(--dourado); letter-spacing: 0.25em; text-transform: uppercase;
+  margin-bottom: 16px;
 }
 
 .cta-section__heading {
-  font-family: var(--f-serif); font-size: clamp(2rem, 4vw, 3rem);
-  font-weight: 500; color: var(--azul-escuro);
-  line-height: 1.2; margin-bottom: 16px;
+  font-family: var(--f-serif); font-size: clamp(2.2rem, 4vw, 3.5rem);
+  font-weight: 400; color: #fff;
+  line-height: 1.18; margin-bottom: 20px;
 }
 
 .cta-section__sub {
-  font-size: var(--s4); color: var(--azul-escuro);
-  opacity: 0.75; margin-bottom: 40px;
+  font-size: var(--s4); color: var(--texto-azul);
+  margin-bottom: 48px;
   font-style: italic; font-family: var(--f-serif);
 }
 
 .btn-dark {
   display: inline-flex; align-items: center; gap: 10px;
-  background: var(--azul-escuro); color: #fff;
+  background: var(--dourado); color: var(--azul-escuro);
   font-family: var(--f-sans); font-size: var(--s2); font-weight: 700;
-  letter-spacing: 0.08em; text-transform: uppercase;
-  padding: 16px 40px; border-radius: var(--radius);
+  letter-spacing: 0.1em; text-transform: uppercase;
+  padding: 18px 48px;
   transition: background var(--trans), transform var(--trans);
 }
-.btn-dark:hover { background: var(--azul); transform: translateY(-2px); }
+.btn-dark:hover { background: var(--dourado-cl); transform: translateY(-2px); }
 
 /* =====================================================
    FOOTER
