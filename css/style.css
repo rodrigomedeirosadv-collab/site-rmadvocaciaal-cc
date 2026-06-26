@@ -646,11 +646,10 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 
 .footer__inner {
   display: grid;
-  grid-template-columns: 1.5fr 1fr 1fr 1.4fr;
-  gap: 48px;
+  grid-template-columns: 1.5fr 0.75fr 1.1fr 1.3fr;
+  gap: 40px;
   margin-bottom: 48px;
 }
-.footer__inner > div:nth-child(3) { padding-left: 32px; }
 
 .footer__info { display: flex; flex-direction: column; gap: 18px; }
 .footer__info-item { display: flex; flex-direction: column; gap: 3px; }
