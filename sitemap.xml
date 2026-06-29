@@ -7,19 +7,19 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://rmadvocaciaal.com.br/sobre.html</loc>
+    <loc>https://rmadvocaciaal.com.br/sobre/</loc>
     <lastmod>2026-06-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://rmadvocaciaal.com.br/servicos.html</loc>
+    <loc>https://rmadvocaciaal.com.br/servicos/</loc>
     <lastmod>2026-06-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://rmadvocaciaal.com.br/contato.html</loc>
+    <loc>https://rmadvocaciaal.com.br/contato/</loc>
     <lastmod>2026-06-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
