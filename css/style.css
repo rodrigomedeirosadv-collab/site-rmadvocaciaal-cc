@@ -1094,15 +1094,25 @@ a.footer__info-value:hover { color: var(--dourado); }
   .nav__cta { display: none; }
   .nav__toggle { display: flex; }
 
-  .hero__inner { grid-template-columns: 1fr; gap: 40px; min-height: auto; }
-  .hero__visual { display: none; }
-  .hero { min-height: auto; padding: 120px 0 80px; }
-  .hero__content { padding-bottom: 0; }
+  /* Hero: foto abaixo do conteúdo */
+  .hero { min-height: auto; padding: 96px 0 0; }
+  .hero__inner { grid-template-columns: 1fr; gap: 32px; min-height: auto; padding-top: 40px; padding-bottom: 0; }
+  .hero__content { padding-bottom: 40px; }
   .hero__heading { font-size: 2rem; }
+  .hero__visual { display: flex; order: 2; }
+  .hero__photo-wrap { min-height: 320px; height: 320px; }
+  .hero__photo-wrap::before { display: none; }
+  .hero__photo { clip-path: none; border-radius: var(--radius) var(--radius) 0 0; }
+
+  /* Seções — padding compacto */
+  .services, .audience, .case, .cta-section { padding: 64px 0; }
+  .videos, .about-bio, .about-values, .contact-section { padding: 64px 0; }
+  .clients { padding: 48px 0; }
+  .page-hero { padding: 56px 0; }
 
   .services__grid { grid-template-columns: 1fr; }
   .audience__grid { grid-template-columns: 1fr; }
-  .case__inner { grid-template-columns: 1fr; gap: 48px; }
+  .case__inner { grid-template-columns: 1fr; gap: 32px; }
   .about-bio__inner { grid-template-columns: 1fr; }
   .contact-section__inner { grid-template-columns: 1fr; }
   .contact-grid { grid-template-columns: 1fr; }
@@ -1113,8 +1123,12 @@ a.footer__info-value:hover { color: var(--dourado); }
   .footer__inner { grid-template-columns: 1fr; gap: 32px; }
   .footer__bottom { flex-direction: column; gap: 8px; text-align: center; }
 
-  .clients__grid { gap: 32px; }
+  .clients__grid { gap: 24px; }
   .whatsapp-float { bottom: 20px; right: 20px; }
+
+  /* Animações horizontais viram verticais (evita overflow-x) */
+  .fade-left, .fade-right { transform: translate3d(0, 30px, 0); }
+  .fade-left.visible, .fade-right.visible { transform: translate3d(0, 0, 0); }
 }
 
 @media (max-width: 600px) {
@@ -1129,8 +1143,11 @@ a.footer__info-value:hover { color: var(--dourado); }
 
 @media (max-width: 480px) {
   .container { padding: 0 16px; }
-  .hero { padding: 100px 0 60px; }
-  .section { padding: 64px 0; }
+  .hero { padding: 88px 0 0; }
+  .hero__photo-wrap { min-height: 260px; height: 260px; }
+  .services, .audience, .case, .cta-section,
+  .videos, .about-bio, .about-values, .contact-section { padding: 56px 0; }
+  .clients { padding: 40px 0; }
   .btn-primary, .btn-outline, .btn-dark { padding: 12px 20px; font-size: var(--s2); }
   .footer__address { font-size: var(--s2); }
   .clients__grid img { width: 120px; height: 56px; }
