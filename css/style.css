@@ -1093,6 +1093,7 @@ a.footer__info-value:hover { color: var(--dourado); }
   }
   .nav__cta { display: none; }
   .nav__toggle { display: flex; }
+  .nav__logo img { height: 30px; }
 
   /* Hero: foto abaixo do conteúdo */
   .hero { min-height: auto; padding: 96px 0 0; }
