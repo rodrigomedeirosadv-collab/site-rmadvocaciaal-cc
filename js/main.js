@@ -1,3 +1,10 @@
+(function () {
+  var blocked = ['r', 'mod', 'uri', 'elementor_library', 'et_core_page_resource'];
+  var params = new URLSearchParams(window.location.search);
+  var dirty = blocked.some(function (p) { return params.has(p); });
+  if (dirty) { window.location.replace(window.location.pathname); }
+})();
+
 /* Nav scroll behavior */
 const nav = document.getElementById('nav');
 if (nav) {
@@ -114,30 +121,31 @@ if (form) {
       return;
     }
 
-    submitBtn.disabled = true;
-    submitBtn.querySelector('.form-submit__text').style.display = 'none';
-    submitBtn.querySelector('.form-submit__loading').style.display = 'inline-flex';
+    const nome     = document.getElementById('nome').value.trim();
+    const telefone = document.getElementById('telefone').value.trim();
+    const email    = document.getElementById('email').value.trim();
+    const assunto  = document.getElementById('assunto');
+    const assuntoTxt = assunto && assunto.value ? assunto.options[assunto.selectedIndex].text : '';
+    const mensagem = document.getElementById('mensagem').value.trim();
 
-    const data = new FormData(form);
-    try {
-      const res = await fetch('https://formsubmit.co/ajax/contato@rmadvocaciaal.com.br', {
-        method: 'POST',
-        body: data,
-        headers: { 'Accept': 'application/json' },
-      });
-      if (res.ok) {
-        form.reset();
-        form.style.display = 'none';
-        successMsg.style.display = 'flex';
-      } else {
-        throw new Error('Erro no envio');
-      }
-    } catch {
-      submitBtn.disabled = false;
-      submitBtn.querySelector('.form-submit__text').style.display = 'inline';
-      submitBtn.querySelector('.form-submit__loading').style.display = 'none';
-      alert('Não foi possível enviar. Tente pelo WhatsApp ou e-mail diretamente.');
-    }
+    const linhas = [
+      `*Novo contato via site*`,
+      ``,
+      `*Nome:* ${nome}`,
+      `*Telefone:* ${telefone}`,
+      `*E-mail:* ${email}`,
+      assuntoTxt ? `*Assunto:* ${assuntoTxt}` : null,
+      ``,
+      `*Mensagem:*`,
+      mensagem,
+    ].filter(l => l !== null).join('\n');
+
+    const url = `https://wa.me/5582993150122?text=${encodeURIComponent(linhas)}`;
+    window.open(url, '_blank', 'noopener,noreferrer');
+
+    form.reset();
+    form.style.display = 'none';
+    successMsg.style.display = 'flex';
   });
 }
 

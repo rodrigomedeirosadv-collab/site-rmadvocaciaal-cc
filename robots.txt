@@ -1,4 +1,9 @@
 User-agent: *
 Allow: /
+Disallow: /*?r=
+Disallow: /*?mod=
+Disallow: /*?uri=
+Disallow: /*?elementor_library=
+Disallow: /*?et_core_page_resource=
 
 Sitemap: https://rmadvocaciaal.com.br/sitemap.xml
