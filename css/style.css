@@ -39,6 +39,7 @@ html {
   scroll-behavior: smooth; font-size: 16px;
   overflow-x: hidden; overscroll-behavior: none; touch-action: pan-y;
   background: var(--azul);
+  scroll-padding-top: 72px;
 }
 html::after {
   content: ''; position: fixed; left: 0; right: 0; bottom: 0; height: 50vh;
@@ -1053,6 +1054,7 @@ a.footer__info-value:hover { color: var(--dourado); }
   display: grid; grid-template-columns: 1fr 1fr;
   gap: 80px; align-items: center;
   margin-bottom: 96px;
+  scroll-margin-top: 96px;
 }
 .service-block:last-child { margin-bottom: 0; }
 .service-block.reverse { direction: rtl; }
