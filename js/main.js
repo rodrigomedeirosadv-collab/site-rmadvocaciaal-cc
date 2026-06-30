@@ -146,6 +146,15 @@ if (form) {
     form.reset();
     form.style.display = 'none';
     successMsg.style.display = 'flex';
+
+    const resetBtn = document.getElementById('form-reset-btn');
+    if (resetBtn) {
+      resetBtn.addEventListener('click', () => {
+        successMsg.style.display = 'none';
+        form.style.display = '';
+        document.getElementById('nome').focus();
+      }, { once: true });
+    }
   });
 }
 

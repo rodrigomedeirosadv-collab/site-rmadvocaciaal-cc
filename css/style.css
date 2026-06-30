@@ -1034,10 +1034,10 @@ a.footer__info-value:hover { color: var(--dourado); }
 .form-textarea { min-height: 140px; resize: vertical; }
 .form-error { font-size: 0.8rem; color: #C0392B; min-height: 18px; }
 .form-success {
-  display: flex; align-items: center; gap: 12px;
-  padding: 20px 24px; border-radius: var(--radius);
-  background: #f0fdf4; border: 1px solid #bbf7d0;
-  color: #166534; font-weight: 600;
+  display: flex; flex-direction: column; align-items: center;
+  text-align: center; gap: 0;
+  padding: 40px 24px; border-radius: var(--radius);
+  background: var(--fundo); border: 1px solid var(--borda);
 }
 
 .map-section { background: var(--branco); padding: 0; }

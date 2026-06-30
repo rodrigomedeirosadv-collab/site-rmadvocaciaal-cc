@@ -255,10 +255,12 @@
               </span>
             </button>
 
-            <p class="form-success" id="form-success" role="status" aria-live="polite" style="display:none;">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-              Mensagem preparada! O WhatsApp abrirá para você enviar.
-            </p>
+            <div class="form-success" id="form-success" role="status" aria-live="polite" style="display:none;">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true" style="color:var(--dourado);flex-shrink:0;"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              <p style="font-family:var(--f-serif);font-size:1.25rem;font-weight:600;color:var(--azul);margin:12px 0 4px;">Mensagem enviada com sucesso!</p>
+              <p style="font-size:0.9rem;color:var(--texto-suave);margin-bottom:20px;">Em breve entraremos em contato.</p>
+              <button type="button" id="form-reset-btn" class="btn-primary" style="font-size:0.85rem;padding:10px 24px;">Enviar nova mensagem</button>
+            </div>
 
             <p style="font-size: 0.75rem; color: var(--texto-suave); margin-top: 16px; line-height: 1.6;">
               Ao enviar, você concorda com nossa <a href="/privacidade/" style="color: var(--dourado);">Política de Privacidade</a>. Seus dados são tratados em conformidade com a LGPD.
