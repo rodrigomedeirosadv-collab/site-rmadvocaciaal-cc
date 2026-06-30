@@ -908,8 +908,17 @@ a.footer__info-value:hover { color: var(--dourado); }
 }
 
 .value-item {
-  padding: 32px;
-  border-top: 2px solid var(--dourado);
+  padding: 40px 32px;
+  background: rgba(255,255,255,0.03);
+  border-top: 2px solid rgba(184,150,62,0.6);
+  border-right: 1px solid rgba(255,255,255,0.06);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  border-left: 1px solid rgba(255,255,255,0.06);
+  transition: background var(--trans), border-top-color var(--trans);
+}
+.value-item:hover {
+  background: rgba(255,255,255,0.06);
+  border-top-color: rgba(184,150,62,0.9);
 }
 
 .value-item__title {
