@@ -538,7 +538,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 .clients__grid a:hover img { filter: none; opacity: 1; }
 .clients__grid img.logo--lg { width: 300px; height: 140px; }
-.clients__grid img.logo--xl { width: 260px; height: 120px; }
+.clients__grid img.logo--xl { width: 300px; height: 140px; }
 
 /* =====================================================
    VÍDEOS INSTAGRAM
