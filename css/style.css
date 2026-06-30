@@ -520,7 +520,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .clients__grid {
   display: flex;
   align-items: center; justify-content: center;
-  gap: 64px; flex-wrap: nowrap;
+  gap: 40px; flex-wrap: nowrap;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
@@ -530,7 +530,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 
 .clients__grid a { display: contents; }
 .clients__grid img {
-  width: 200px; height: 100px;
+  width: 240px; height: 120px;
   object-fit: contain;
   filter: grayscale(1);
   opacity: 0.5;
@@ -538,7 +538,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 .clients__grid a:hover img { filter: none; opacity: 1; }
 .clients__grid img.logo--lg { width: 300px; height: 140px; }
-.clients__grid img.logo--xl { width: 300px; height: 140px; }
+.clients__grid img.logo--xl { width: 340px; height: 160px; }
 
 /* =====================================================
    VÍDEOS INSTAGRAM
