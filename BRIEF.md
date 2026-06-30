@@ -34,7 +34,7 @@ Objetivo: Site institucional multi-páginas
 02 O QUE FAÇO   — 3 pilares: Estruturação Societária, Holding Familiar, Vesting
 03 PARA QUEM    — PMEs / Empresário Individual / Empresário Organizado
 04 CASO REAL    — linha do tempo (empresa de exames médicos — casal sócio)
-05 RESULTADOS   — empresas assistidas (logos: Café da Praça, Extra, GastroMed, Razzon, Torhinus)
+05 RESULTADOS   — empresas assistidas (logos: Café da Praça, Extra, GastroMed, Razzon, Otorhinus)
 06 VÍDEOS       — embed Instagram @advogado.rodrigomedeiros
 07 DEPOIMENTOS  — (a definir com cliente)
 08 CTA FINAL    — "Me conte seu caso"
@@ -51,7 +51,7 @@ Objetivo: Site institucional multi-páginas
 - Logo: logo-rodrigo-medeiros-advocacia.webp
 - Favicon: favicon.png
 - Vídeos: embed Instagram @advogado.rodrigomedeiros
-- Empresas assistidas: logos (Café da Praça, Extra Jornalismo, GastroMed, Razzon, Torhinus)
+- Empresas assistidas: logos (Café da Praça, Extra Jornalismo, GastroMed, Razzon, Otorhinus)
 
 ## Design System
 

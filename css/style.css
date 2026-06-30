@@ -1090,8 +1090,9 @@ a.footer__info-value:hover { color: var(--dourado); }
     padding: 16px 0;
   }
   .nav__links.open a {
-    padding: 14px 24px; width: 100%;
-    border-bottom: 1px solid rgba(255,255,255,0.06);
+    padding: 16px 24px; width: 100%;
+    min-height: 52px; display: flex; align-items: center;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
   }
   .nav__cta { display: none; }
   .nav__toggle { display: flex; }
@@ -1111,7 +1112,7 @@ a.footer__info-value:hover { color: var(--dourado); }
   .services, .audience, .case, .cta-section { padding: 64px 0; }
   .videos, .about-bio, .about-values, .contact-section { padding: 64px 0; }
   .clients { padding: 48px 0; }
-  .page-hero { padding: 56px 0; }
+  .page-hero { padding: 100px 0 64px; }
 
   .services__grid { grid-template-columns: 1fr; }
   .audience__grid { grid-template-columns: 1fr; }
