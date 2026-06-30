@@ -1150,6 +1150,8 @@ a.footer__info-value:hover { color: var(--dourado); }
     overflow-x: visible;
   }
   .clients__grid img { width: 160px; height: 70px; }
+  .clients__grid img.logo--xl { width: 160px; height: 70px; }
+  .clients__grid img.logo--xl[alt*="Otorhinus"] { width: 200px; height: 90px; }
   .whatsapp-float { bottom: 20px; right: 20px; }
 
   /* Animações horizontais viram verticais (evita overflow-x) */
