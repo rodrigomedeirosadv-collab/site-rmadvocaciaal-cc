@@ -518,15 +518,12 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 
 .clients__grid {
-  display: flex;
-  align-items: center; justify-content: center;
-  gap: 40px; flex-wrap: nowrap;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-  scrollbar-width: none;
-  padding-bottom: 4px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 48px 64px;
+  align-items: center;
+  justify-items: center;
 }
-.clients__grid::-webkit-scrollbar { display: none; }
 
 .clients__grid a { display: contents; }
 .clients__grid img {
@@ -1141,7 +1138,7 @@ a.footer__info-value:hover { color: var(--dourado); }
   .footer__inner { grid-template-columns: 1fr; gap: 32px; }
   .footer__bottom { flex-direction: column; gap: 8px; text-align: center; }
 
-  .clients__grid { gap: 24px; }
+  .clients__grid { grid-template-columns: repeat(2, 1fr); gap: 32px 40px; }
   .whatsapp-float { bottom: 20px; right: 20px; }
 
   /* Animações horizontais viram verticais (evita overflow-x) */
