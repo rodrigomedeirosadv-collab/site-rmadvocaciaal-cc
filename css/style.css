@@ -802,13 +802,15 @@ a.footer__info-value:hover { color: var(--dourado); }
   border-top: 1px solid rgba(201,168,76,0.25);
   padding: 20px 24px;
   padding-bottom: max(20px, env(safe-area-inset-bottom));
-  display: flex; align-items: center; justify-content: space-between;
+  display: none; align-items: center; justify-content: space-between;
   gap: 24px; flex-wrap: wrap;
   transform: translateY(100%);
   transition: transform 0.4s ease;
 }
-.cookie-banner.show,
-.cookie-banner.visible { transform: translateY(0); }
+.cookie-banner.show {
+  display: flex;
+  transform: translateY(0);
+}
 
 .cookie-banner p {
   font-size: var(--s2); color: var(--texto-azul);
