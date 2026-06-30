@@ -50,16 +50,19 @@
     "url": "https://rmadvocaciaal.com.br/servicos/",
     "telephone": "+5582993150122",
     "description": "Auditoria societária, Estruturação Societária, Holding Familiar, Vesting e Joint Venture em Maceió/AL.",
-    "areaServed": ["Maceió", "Alagoas", "Brasil"],
+    "areaServed": [
+      { "@type": "City", "name": "Maceió" },
+      { "@type": "State", "name": "Alagoas" }
+    ],
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
       "name": "Serviços de Direito Societário",
       "itemListElement": [
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Auditoria Societária" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Estruturação Societária" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Holding Familiar" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Vesting" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Joint Venture" } }
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Auditoria Societária", "areaServed": "Maceió, Alagoas" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Estruturação Societária", "areaServed": "Maceió, Alagoas" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Holding Familiar", "areaServed": "Maceió, Alagoas" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Vesting", "areaServed": "Maceió, Alagoas" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Joint Venture", "areaServed": "Maceió, Alagoas" } }
       ]
     },
     "address": {
@@ -72,6 +75,55 @@
     }
   }
   </script>
+
+  <!-- Schema: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Início", "item": "https://rmadvocaciaal.com.br/" },
+      { "@type": "ListItem", "position": 2, "name": "Serviços", "item": "https://rmadvocaciaal.com.br/servicos/" }
+    ]
+  }
+  </script>
+
+  <!-- Schema: FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "O que é estruturação societária?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Estruturação societária é o conjunto de medidas jurídicas que define como a empresa funciona por dentro: quem decide, como os lucros são divididos, o que acontece quando um sócio quer sair e como resolver conflitos sem ir a juízo. Envolve elaboração e revisão de contrato social, acordo de sócios e reorganização da estrutura da empresa."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Qual a diferença entre holding familiar e holding patrimonial?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A holding familiar concentra o patrimônio da família (imóveis, participações societárias) com foco em planejamento sucessório e redução de impostos na herança. A holding patrimonial pode ter um escopo mais amplo, incluindo proteção de ativos contra riscos empresariais. Na prática, os termos são usados de forma intercambiável e o formato ideal depende do objetivo de cada família."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "O que é joint venture e quando devo usar?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Joint venture é uma parceria estruturada entre duas ou mais empresas para um objetivo comum, com regras claras sobre quem decide, quem responde pelos riscos e como cada parte sai do negócio se o projeto mudar de rumo. É indicada quando há complementaridade entre empresas mas cada uma quer preservar sua autonomia fora da parceria."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- Preload LCP -->
+  <link rel="preload" as="image" href="../assets/imagens/estruturacao-societaria-auditoria-contrato-maceio.webp" fetchpriority="high">
 </head>
 <body>
 
